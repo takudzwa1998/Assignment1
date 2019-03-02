@@ -1,0 +1,21 @@
+JC=javac
+.SUFFIXES: .java .class
+
+SRCDIR=src
+BINDIR=bin
+DOCDIR=doc
+
+$(BINDIR)/%.class:$(SRCDIR)/%.java
+	$(JC) -d $(BINDIR)/ -cp $(SRCDIR) $<
+
+CLASSES=PowerArrayApp.class PowerBSTApp.class BSTNode.class BST.class
+
+CLASS_FILES=$(CLASSES:%.class=$(BINDIR)/%.class)
+
+default: $(CLASS_FILES)
+
+clean:
+	rm $(BINDIR)/*.class
+
+javadoc:
+	javadoc $(SRCDIR)/*.java
