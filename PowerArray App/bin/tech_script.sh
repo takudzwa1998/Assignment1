@@ -30,3 +30,27 @@ do
 java PowerBSTApp $line_THREE>>Datasets/BST_Op_Count_Values_WORST_CASE.txt
 
 done<Datasets/DS3.txt
+
+while read line_4
+
+do
+
+java PowerBSTApp $line_4>>Datasets/Op_Count_Values_WORST_CASE.txt
+
+done<Datasets/DS3.txt
+
+while read line_5
+
+do
+
+java PowerBSTApp $line_5>>Datasets/Op_Count_Values_AVERAGE_CASE.txt
+
+done<Datasets/DS2.txt
+
+while read line_6
+
+do
+
+java PowerBSTApp $line_5>>Datasets/Op_Count_Values_BEST_CASE.txt
+
+done<Datasets/DS1.txt

@@ -8,8 +8,8 @@ public class BST
         if ( root == null )
 		
         {
-            root = new BSTNode( key, value1, value2);
 	    count_two++;
+            root = new BSTNode( key, value1, value2);
         }
         else
         {
@@ -19,6 +19,7 @@ public class BST
 
     public Object get( String key )
     {
+	count_two++;
         return root == null ? null : root.get( key );
     }
    public int getCount_two(){

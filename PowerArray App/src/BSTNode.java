@@ -23,9 +23,9 @@ public class BSTNode {
         if ( key.compareTo( this.key ) < 0 )        
         {             
             if ( left != null )             
-            {                 
-                left.put( key, value1, value2);  
-		count++;            
+            { 
+		count++;                
+                left.put( key, value1, value2);            
             }             
             else             
             {                 
@@ -37,8 +37,9 @@ public class BSTNode {
             if ( right != null )
 
             {
-                right.put( key, value1, value2);
 		count++;
+                right.put( key, value1, value2);
+
             }
             else
             {
@@ -59,6 +60,7 @@ public class BSTNode {
     {
         if ( this.key.equals( key ) )
         {
+	    count++;
             return (key+" "+value1+" "+value2);
         }
 
