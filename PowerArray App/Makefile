@@ -8,7 +8,7 @@ DOCDIR=doc
 $(BINDIR)/%.class:$(SRCDIR)/%.java
 	$(JC) -d $(BINDIR)/ -cp $(SRCDIR) $<
 
-CLASSES=PowerArrayApp.class PowerBSTApp.class BSTNode.class BST.class
+CLASSES=PowerArrayApp.class PowerBSTApp.class BSTNode.class BST.class DateExtract.class
 
 CLASS_FILES=$(CLASSES:%.class=$(BINDIR)/%.class)
 
