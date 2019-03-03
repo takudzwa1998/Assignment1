@@ -17,7 +17,7 @@ public class PowerBSTApp{
 		String line = null;
 	try{
 	
-            BufferedReader filereader = new BufferedReader(new FileReader("/home/s/shmtak004/Downloads/cleaned_data.csv"));
+            BufferedReader filereader = new BufferedReader(new FileReader("cleaned_data.csv"));
             int x = 0;
             int CompCount=0;
 
@@ -29,12 +29,16 @@ public class PowerBSTApp{
 }
         catch (Exception e){ e.printStackTrace();}
 
+
+
 	if (muti.get(dateTime)!=null){
 	System.out.println(muti.get(dateTime));
 	System.out.println(muti.root.getCount()+muti.getCount_two());
 	}
 	else{System.out.println("date and time not found");
 	System.out.println(muti.root.getCount()+muti.getCount_two());}
+
+
 
 }
 
@@ -46,7 +50,7 @@ public static void printAllDateTimes(){
 		String line = null;
 	try{
 
-            BufferedReader filereader = new BufferedReader(new FileReader("/home/s/shmtak004/Downloads/cleaned_data.csv"));
+            BufferedReader filereader = new BufferedReader(new FileReader("cleaned_data.csv"));
             int x = 0;
             //int CompCount=0;
 

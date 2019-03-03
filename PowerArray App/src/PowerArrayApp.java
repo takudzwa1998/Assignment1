@@ -24,7 +24,7 @@ public class PowerArrayApp {
         int y=0;
         int n=0;
         try{
-            BufferedReader filereader = new BufferedReader(new FileReader("/home/s/shmtak004/Downloads/cleaned_data.csv"));
+            BufferedReader filereader = new BufferedReader(new FileReader("cleaned_data.csv"));
             int x = 0;
             int CompCount=0;
 
@@ -84,7 +84,7 @@ public class PowerArrayApp {
         int y=0;
         int n=0;
         try{
-            BufferedReader filereader = new BufferedReader(new FileReader("/home/s/shmtak004/Downloads/cleaned_data.csv"));
+            BufferedReader filereader = new BufferedReader(new FileReader("cleaned_data.csv"));
             int x = 0;
 	    int CompCount=0;
             while ((line = filereader.readLine())!=null){
