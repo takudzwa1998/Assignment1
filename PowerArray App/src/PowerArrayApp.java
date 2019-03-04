@@ -56,7 +56,7 @@ public class PowerArrayApp {
             for(int r=0;r<FinalArray.length;r++){
                 CompCount++;
                 if (dateTime.equals(FinalArray[r])) {
-                    System.out.println(FinalArray[r]+" "+FinalArray[r+1]+" "+FinalArray[r+2]);
+                    //System.out.println(FinalArray[r]+" "+FinalArray[r+1]+" "+FinalArray[r+2]);
                     break;
                 }
                 

@@ -18,4 +18,4 @@ clean:
 	rm $(BINDIR)/*.class
 
 javadoc:
-	javadoc $(SRCDIR)/*.java
+	javadoc  -classpath ${BINDIR} -d ${DOCDIR} ${SRCDIR}/*.java

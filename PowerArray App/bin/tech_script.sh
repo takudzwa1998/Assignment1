@@ -51,6 +51,6 @@ while read line_6
 
 do
 
-java PowerArrayApp $line_5>>Datasets/Op_Count_Values_BEST_CASE.txt
+java PowerArrayApp $line_6>>Datasets/Op_Count_Values_BEST_CASE.txt
 
 done<Datasets/DS1.txt
