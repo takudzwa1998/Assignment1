@@ -33,7 +33,7 @@ public class PowerBSTApp{
 
 	if (muti.get(dateTime)!=null){
 	System.out.println(muti.get(dateTime));
-	System.out.println(muti.root.getCount()+muti.getCount_two());
+	System.out.println("BSTNode No. "+muti.root.getCount()+" BST No. "+muti.getCount_two());
 	}
 	else{System.out.println("date and time not found");
 	System.out.println(muti.root.getCount()+muti.getCount_two());}
