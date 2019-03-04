@@ -21,11 +21,11 @@ public class BSTNode {
     //is updated.
     public void put( String key, Object value1, Object value2)
     {
-	count++;
+	//count++;
         if ( key.compareTo( this.key ) < 0 ) 
        
         {      
-	count++;       
+	//count++;       
             if ( left != null )             
             { 
 		                
@@ -38,17 +38,17 @@ public class BSTNode {
         }         
         else if ( key.compareTo( this.key ) > 0 )
         {
-	count++;
+	//count++;
             if ( right != null )
 
             {
-	count++;
+	//count++;
                 right.put( key, value1, value2);
 
             }
             else
             {
-	count++;
+	//count++;
                 right = new BSTNode( key, value1, value2);
             }
         }
@@ -62,27 +62,23 @@ public class BSTNode {
     }
 
     //find Node with given key and return it's value
-    public String get( String key )
+    public String get( String key)
 
     {
-
 	    count++;
-
         if ( this.key.equals( key ) )
         {
-
+	count++;
             return (key+" "+value1+" "+value2);
         }
-
+	count++;
         if ( key.compareTo( this.key ) < 0 )
         {
-	count++;
             return left == null ? null : left.get( key );
 	   
         }
         else
         {
-	count++;
             return right == null ? null : right.get( key );
         }
     }
