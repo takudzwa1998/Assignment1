@@ -4,7 +4,7 @@ public class BSTNode {
     private Object value1;
     private Object value2;
     private BSTNode left, right;
-    public int count=0;
+    private static int count=0;
 
     public BSTNode( String key, Object value1, Object value2)
     {
@@ -21,14 +21,12 @@ public class BSTNode {
     //is updated.
     public void put( String key, Object value1, Object value2)
     {
-	//count++;
         if ( key.compareTo( this.key ) < 0 ) 
        
-        {      
-	//count++;       
+        {             
             if ( left != null )             
             { 
-		                
+		count++;                
                 left.put( key, value1, value2);            
             }             
             else             
@@ -38,17 +36,15 @@ public class BSTNode {
         }         
         else if ( key.compareTo( this.key ) > 0 )
         {
-	//count++;
             if ( right != null )
 
             {
-	//count++;
+		count++;
                 right.put( key, value1, value2);
 
             }
             else
             {
-	//count++;
                 right = new BSTNode( key, value1, value2);
             }
         }
@@ -65,20 +61,20 @@ public class BSTNode {
     public String get( String key)
 
     {
-	    count++;
         if ( this.key.equals( key ) )
         {
 	count++;
             return (key+" "+value1+" "+value2);
         }
-	count++;
         if ( key.compareTo( this.key ) < 0 )
         {
+	count++;
             return left == null ? null : left.get( key );
 	   
         }
         else
         {
+	count++;
             return right == null ? null : right.get( key );
         }
     }
