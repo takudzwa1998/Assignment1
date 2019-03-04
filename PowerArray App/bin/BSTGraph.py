@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 Counts_BEST=[]
 bst=[]
 a=0
-file=open("Datasets/Op_Count_Values_BEST_CASE.txt", "r")
+file=open("Datasets/BST_Op_Count_Values_BEST_CASE.txt", "r")
 for line in file.readlines():
 	float_count=int(line)
 	Counts_BEST.append(float_count)
@@ -16,7 +16,7 @@ for line in file.readlines():
 Counts_AVG=[]
 avg=[]
 b=0
-file=open("Datasets/Op_Count_Values_AVERAGE_CASE.txt", "r")
+file=open("Datasets/BST_Op_Count_Values_AVERAGE_CASE.txt", "r")
 for line in file.readlines():
 	float_count=int(line)
 	Counts_AVG.append(float_count)
@@ -27,7 +27,7 @@ for line in file.readlines():
 Counts_WORST=[]
 worst=[]
 c=0
-file=open("Datasets/Op_Count_Values_WORST_CASE.txt", "r")
+file=open("Datasets/BST_Op_Count_Values_WORST_CASE.txt", "r")
 for line in file.readlines():
 	float_count=int(line)
 	Counts_WORST.append(float_count)
@@ -37,10 +37,9 @@ for line in file.readlines():
 
 
 
-plt.title('Graph of Number of Count Operations Against Number of Sampled Data Items for ArraySearch')
+plt.title('Graph of Number of Count Operations Against Number of Sampled Data Items for BSTSearch')
 plt.xlabel('No. of Sampled Data Items')
 plt.ylabel('No. of Count Operations')
 plt.plot(worst,Counts_WORST, 'g--',avg,Counts_AVG, 'b--',bst,Counts_BEST, 'r--'  )
-plt.axis([ 0, 600,1, 1600])
+plt.axis([ 0, 550,500, 525])
 plt.show()
-
