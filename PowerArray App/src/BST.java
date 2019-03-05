@@ -7,11 +7,12 @@ public class BST
         if ( root == null )
 		
         {
-	    count_two++;
+	    //count_two++;
             root = new BSTNode( key, value1, value2);
         }
         else
         {
+	    //count_two++;
             root.put( key, value1, value2);
         }
     }
@@ -19,6 +20,7 @@ public class BST
     public Object get( String key)
 	
     {
+	    count_two++;
         return root == null ? null : root.get( key );
     }
    public int getCount_two(){

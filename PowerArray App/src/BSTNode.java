@@ -21,12 +21,14 @@ public class BSTNode {
     //is updated.
     public void put( String key, Object value1, Object value2)
     {
+	//count++;
         if ( key.compareTo( this.key ) < 0 ) 
-       
-        {             
+      
+        {     
+ 	//count++;        
             if ( left != null )             
             { 
-		count++;                
+		//count++;                
                 left.put( key, value1, value2);            
             }             
             else             
@@ -36,10 +38,11 @@ public class BSTNode {
         }         
         else if ( key.compareTo( this.key ) > 0 )
         {
+ 	//count++;
             if ( right != null )
 
             {
-		count++;
+		//count++;
                 right.put( key, value1, value2);
 
             }

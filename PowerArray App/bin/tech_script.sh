@@ -11,7 +11,7 @@ while read line_ONE
 
 do
 
-java PowerBSTApp $line_ONE>>Datasets/BST_Op_Count_Values_BEST_CASE.txt
+java PowerBSTApp GetOpCountsFiles $line_ONE>>Datasets/BST_Op_Count_Values_BEST_CASE.txt
 
 done<Datasets/DS1.txt
 
@@ -19,7 +19,7 @@ while read line_TWO
 
 do
 
-java PowerBSTApp $line_TWO>>Datasets/BST_Op_Count_Values_AVERAGE_CASE.txt
+java PowerBSTApp GetOpCountsFiles $line_TWO>>Datasets/BST_Op_Count_Values_AVERAGE_CASE.txt
 
 done<Datasets/DS2.txt
 
@@ -27,30 +27,30 @@ while read line_THREE
 
 do
 
-java PowerBSTApp $line_THREE>>Datasets/BST_Op_Count_Values_WORST_CASE.txt
+java PowerBSTApp GetOpCountsFiles $line_THREE>>Datasets/BST_Op_Count_Values_WORST_CASE.txt
 
 done<Datasets/DS3.txt
 
-while read line_4
+#while read line_4
 
-do
+#do
 
-java PowerArrayApp $line_4>>Datasets/Op_Count_Values_WORST_CASE.txt
+#java PowerArrayApp GetOpCountsFiles $line_4>>Datasets/Op_Count_Values_WORST_CASE.txt
 
-done<Datasets/DS3.txt
+#done<Datasets/DS3.txt
 
-while read line_5
+#while read line_5
 
-do
+#do
 
-java PowerArrayApp $line_5>>Datasets/Op_Count_Values_AVERAGE_CASE.txt
+#java PowerArrayApp GetOpCountsFiles $line_5>>Datasets/Op_Count_Values_AVERAGE_CASE.txt
 
-done<Datasets/DS2.txt
+#done<Datasets/DS2.txt
 
-while read line_6
+#while read line_6
 
-do
+#do
 
-java PowerArrayApp $line_6>>Datasets/Op_Count_Values_BEST_CASE.txt
+#java PowerArrayApp "GetOpCountsFiles" $line_6>>Datasets/Op_Count_Values_BEST_CASE.txt
 
-done<Datasets/DS1.txt
+#done<Datasets/DS1.txt
