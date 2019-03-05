@@ -33,14 +33,25 @@ for line in file.readlines():
 	Counts_WORST.append(float_count)
 	worst.append(c)
 	c+=1
-
-
-
-
 plt.title('Graph of Number of Count Operations Against Number of Sampled Data Items for ArraySearch')
-plt.xlabel('No. of Sampled Data Items')
+
+plt.subplot(3,1,1)
+plt.gca().set_title('Worst Case')
+plt.plot(worst,Counts_WORST, 'g--')
 plt.ylabel('No. of Count Operations')
-plt.plot(worst,Counts_WORST, 'g--',avg,Counts_AVG, 'b--',bst,Counts_BEST, 'r--'  )
+
+plt.subplot(3,1,2)
+plt.gca().set_title('Average Case')
+plt.plot(avg,Counts_AVG, 'b--')
+plt.ylabel('No. of Count Operations')
+
+plt.subplot(3,1,3)
+plt.gca().set_title('Best Case')
+plt.ylabel('No. of Count Operations')
+plt.xlabel('No. of Sampled Data Items')
+plt.plot(bst,Counts_BEST, 'r--'  )
+
 plt.axis([ 0, 600,1, 1600])
+
 plt.show()
 
