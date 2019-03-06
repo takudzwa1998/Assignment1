@@ -27,7 +27,7 @@ for line in file.readlines():
 Counts_WORST=[]
 worst=[]
 c=0
-file=open("Datasets/Op_Count_Values_5.txt", "r")
+file=open("Datasets/Op_Count_Values_BEST_5.txt", "r")
 for line in file.readlines():
 	float_count=int(line)
 	Counts_WORST.append(float_count)
