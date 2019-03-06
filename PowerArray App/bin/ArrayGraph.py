@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 Counts_BEST=[]
 bst=[]
 a=0
-file=open("Datasets/Op_Count_Values_BEST_CASE.txt", "r")
+file=open("Datasets/Op_Count_Values_1.txt", "r")
 for line in file.readlines():
 	float_count=int(line)
 	Counts_BEST.append(float_count)
@@ -16,7 +16,7 @@ for line in file.readlines():
 Counts_AVG=[]
 avg=[]
 b=0
-file=open("Datasets/Op_Count_Values_AVERAGE_CASE.txt", "r")
+file=open("Datasets/Op_Count_Values_2.txt", "r")
 for line in file.readlines():
 	float_count=int(line)
 	Counts_AVG.append(float_count)
@@ -27,31 +27,57 @@ for line in file.readlines():
 Counts_WORST=[]
 worst=[]
 c=0
-file=open("Datasets/Op_Count_Values_WORST_CASE.txt", "r")
+file=open("Datasets/Op_Count_Values_5.txt", "r")
 for line in file.readlines():
 	float_count=int(line)
 	Counts_WORST.append(float_count)
 	worst.append(c)
 	c+=1
+
+#Worst Graph
+Counts_4=[]
+w4=[]
+c=0
+file=open("Datasets/Op_Count_Values_4.txt", "r")
+for line in file.readlines():
+	float_count=int(line)
+	Counts_4.append(float_count)
+	w4.append(c)
+	c+=1
+
+#Worst Graph
+Counts_5=[]
+w5=[]
+c=0
+file=open("Datasets/Op_Count_Values_3.txt", "r")
+for line in file.readlines():
+	float_count=int(line)
+	Counts_5.append(float_count)
+	w5.append(c)
+	c+=1
+
 plt.title('Graph of Number of Count Operations Against Number of Sampled Data Items for ArraySearch')
 
-plt.subplot(3,1,1)
-plt.gca().set_title('Worst Case')
-plt.plot(worst,Counts_WORST, 'g--')
-plt.ylabel('No. of Count Operations')
-
-plt.subplot(3,1,2)
-plt.gca().set_title('Average Case')
-plt.plot(avg,Counts_AVG, 'b--')
-plt.ylabel('No. of Count Operations')
-
-plt.subplot(3,1,3)
-plt.gca().set_title('Best Case')
+plt.subplot(5,1,1)
 plt.ylabel('No. of Count Operations')
 plt.xlabel('No. of Sampled Data Items')
 plt.plot(bst,Counts_BEST, 'r--'  )
+plt.axis([ 0, 600,1, 1600])
+plt.subplot(5,1,2)
+plt.plot(avg,Counts_AVG, 'b--')
+plt.axis([ 0, 600,1, 1600])
+plt.subplot(5,1,3)
+plt.xlabel('No. of Sampled Data Items')
+plt.plot(w5,Counts_5, 'm--'  )
+plt.axis([ 0, 600,1, 1600])
+plt.subplot(5,1,4)
+plt.xlabel('No. of Sampled Data Items')
+plt.plot(w4,Counts_4, 'c--'  )
+plt.axis([ 0, 600,1, 1600])
+plt.subplot(5,1,5)
+plt.plot(worst,Counts_WORST, 'g--')
+plt.xlabel('No. of Operation Counts')
 
 plt.axis([ 0, 600,1, 1600])
 
 plt.show()
-
